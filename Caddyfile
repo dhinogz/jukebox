@@ -1,0 +1,4 @@
+# TODO: replace with domain in production
+:80
+
+reverse_proxy server:3000

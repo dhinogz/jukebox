@@ -1,0 +1,31 @@
+{{template "header" .}}
+<div class="px-6">
+   <h1 class="py-4 text-4xl semibold tracking-light">
+			Hey there {{.U.User.DisplayName}}!
+   </h1>
+    <p>
+        {{.U.Country}}
+    </p>
+    <p>
+        {{.U.Email}}
+    </p>
+    <p>
+        {{.U.Product}}
+    </p>
+    <p>
+        {{.U.Birthdate}}
+    </p>
+    {{range .P.Playlists}}
+    <p>
+        {{.Name}}
+    </p>
+    {{end}}
+    <img src="{{.Image}}" alt="">
+    <form action="/signout" method="post" class="inline pr-4">
+        <div class="hidden">
+            {{csrfField}}
+        </div>
+        <button class="px-4 py-2 bg-blue-700 hover:bg-blue-600 rounded" type="submit">Sign Out</button>
+    </form>
+</div>
+{{template "footer" .}}
