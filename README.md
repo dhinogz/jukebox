@@ -1,4 +1,4 @@
-# MyTunes (Placeholder)
+# MyTunes 
 
 ## Prerequisites
 Make sure that you have installed the latest version of Go. Visit the official Go website for download instructions.
